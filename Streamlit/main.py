@@ -1,6 +1,6 @@
 import streamlit as st
-from langchain import PromptTemplate
-from langchain.llms import OpenAI
+# from langchain import PromptTemplate
+# from langchain.llms import OpenAI
 # from dotenv import load_dotenv
 import os 
 
@@ -16,18 +16,30 @@ st.markdown('''Meal prep is boring and time consuming. Preparing a grocery list 
 
 st.markdown('''### Make the following selections''')
 
-col1, col2, col3 = st.columns(3)
+col1, col2 = st.columns(2)
 
 with col1:
-    option_category = st.selectbox(
-        'Which category does this complaint fall under?',
-        ('Returns','Refunds','Shipment issue'))
-with col2:
-    option_tone = st.selectbox(
-        'Which tone would you like your email to have?',
-        ('Formal', 'Informal'))
+
+    option_meal = st.multiselect(
+        'Please select your meal',
+        ('Breakfast','Lunch','Dinner'))
     
-with col3:
-    option_dialect = st.selectbox(
-        'Which English Dialect would you like?',
-        ('American', 'British'))
+    option_num_days = st.multiselect(
+        'Please select number of days',
+        ('1','2','3','4','5','6','7'))
+    
+
+with col2:
+
+    option_diet = st.selectbox(
+        'Which of the following dietary restrictions applies to you?',
+        ('Vegan', 'Vegetarian', 'Gluten Free', 'Pescatarian','Pescapescetarian', 'I eat everything'))
+    
+    option_servings_per_meal = st.multiselect(
+        'Please select number of servings per meal',
+        ('1','2','3','4'))
+    
+
+    
+
+    
