@@ -2,7 +2,7 @@ import streamlit as st
 from langchain import PromptTemplate
 from langchain.llms import OpenAI
 import os 
-from dotenv import load_dotenv
+#from dotenv import load_dotenv
 
 load_dotenv('.env')
 openai_api_key = os.getenv('openai_api_key')
