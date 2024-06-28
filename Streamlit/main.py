@@ -110,6 +110,8 @@ template = """
 
     The grocery list should generate a bulleted list of groceries along with quantity.
 
+    The response should have a Guy Fieri tone to it.
+
     
     Below are the selected options:
     MEALS: {meal}
